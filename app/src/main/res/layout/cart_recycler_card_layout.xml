@@ -2,25 +2,36 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_margin="20dp"
+    app:cardCornerRadius="10dp"
+    android:id="@+id/ll_cartItem">
+
+    <View
+        android:id="@+id/view_margin"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
 
     <android.support.v7.widget.CardView
+        android:id="@+id/cartRecyclerCardViewLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp">
+        android:layout_height="wrap_content" >
 
         <RelativeLayout
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="10dp">
+            android:padding="10dp"
+            android:layout_margin="10dp">
 
             <!--Image and Check Status-->
-            <LinearLayout
+            <FrameLayout
                 android:id="@+id/leftPartLayout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
-
                 <ImageView
                     android:id="@+id/ivProductImage"
                     android:layout_width="170dp"
@@ -29,8 +40,20 @@
                     android:contentDescription="productImage"
                     android:padding="4dp" />
 
+                <TextView
+                    android:id="@+id/tvOfferImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/star"
+                    android:contentDescription="productImage"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="Offer" />
+
+
+
                 <!--Image and Check Status Container Ends-->
-            </LinearLayout>
+            </FrameLayout>
 
             <!--Right Part Layout starts -->
             <LinearLayout

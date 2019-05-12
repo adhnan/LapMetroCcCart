@@ -4,8 +4,9 @@ public class CartProduct {
     private int cartProductImage  ;
     private String cartProductId,cartProductDesc,stockCount,gst,offAmount;
     private double price;
+    private boolean offerValid ;
 
-    public CartProduct(int cartProductImage, String cartProductId, String cartProductDesc, String stockCount, String gst, String offAmount, double price) {
+    public CartProduct(boolean offerValid,int cartProductImage, String cartProductId, String cartProductDesc, String stockCount, String gst, String offAmount, double price) {
         this.cartProductImage = cartProductImage;
         this.cartProductId = cartProductId;
         this.cartProductDesc = cartProductDesc;
@@ -13,6 +14,11 @@ public class CartProduct {
         this.gst = gst;
         this.offAmount = offAmount;
         this.price = price;
+        this.offerValid=offerValid;
+    }
+
+    public boolean getOfferValid() {
+        return offerValid;
     }
 
     public int getCartProductImage() {
